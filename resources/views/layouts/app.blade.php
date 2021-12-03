@@ -31,6 +31,7 @@
      <link rel="stylesheet" href="/assets/css/plugins/bootstrap.css" />
 
      <!-- Main Style -->
+     <link rel="stylesheet" href="/assets/css/style.css" />
      <link rel="stylesheet" href="/assets/css/demo1.css" />
      <link rel="stylesheet" href="/assets/css/responsive.css" />
 
@@ -103,7 +104,7 @@
                                  <ul class="dropdown-menu dropdown-menu-right">
                                      <li><a class="dropdown-item" href="register.html">Register</a></li>
                                      <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                     <li><a class="dropdown-item" href="login.html">Login</a></li>
+                                     <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                                  </ul>
                              </div>
                              <!-- Header User End -->
@@ -171,7 +172,7 @@
                                      <ul class="dropdown-menu dropdown-menu-right">
                                          <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                                          <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
-                                         <li><a class="dropdown-item" href="login.html">Login</a></li>
+                                         <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                                      </ul>
                                  </div>
                                  <!-- Header User End -->
