@@ -17,7 +17,9 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->image);
+        $ext = $request->file('image')->getClientOriginalExtension();
+        $filename = \Str::slug($request->title).time(). '.' .$ext;
+        $request->image->move(public_path('products'), $filename);
 
         $product = new Product();
         $product->title = $request->title;
@@ -26,8 +28,17 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->category = $request->category;
         $product->user_id = Auth::user()->id;
+        $product->image = $filename;
         $product->save();
 
         return back();
+    }
+
+
+    public function products()
+    {
+        $products = Product::all();
+
+        return view('products', compact('products') );
     }
 }

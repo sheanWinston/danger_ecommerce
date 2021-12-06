@@ -26,5 +26,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/add-product', 'ProductController@add')->name('product.add');
 Route::post('/store-product', 'ProductController@store')->name('product.store');
+Route::get('/all-products', 'ProductController@products')->name('products.all');
 
 

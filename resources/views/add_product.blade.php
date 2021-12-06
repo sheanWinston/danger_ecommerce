@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="ec-vendor-block-profile">
-                                    <form action="{{ route('product.store') }}" method="POST" >@csrf
+                                    <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data" >@csrf
                                         <div class="form-group">
                                             <label for="">Title</label>
                                             <input type="text" name="title" class="form-control">
@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Image</label>
-                                            <input type="file" name="image" class="form-control">
+                                            <input type="file" name="image" accept="image/*" class="form-control">
                                         </div>
                                         <button class="btn btn-primary">Upload</button>
                                     </form>

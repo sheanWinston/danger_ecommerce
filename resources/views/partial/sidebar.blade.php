@@ -12,7 +12,7 @@
                     <ul>
                         <li><a href="{{ route('home') }}">User Profile</a></li>
                         <li><a href="{{ route('product.add') }}">Add New Product</a></li>
-                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="{{ route('products.all') }}">All Products</a></li>
                         <li><a href="cart.html">Cart</a></li>
                         <li><a href="checkout.html">Checkout</a></li>
                         <li><a href="track-order.html">Track Order</a></li>
