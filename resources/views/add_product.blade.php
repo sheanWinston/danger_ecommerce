@@ -13,7 +13,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="ec-vendor-block-profile">
-                                    <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data" >@csrf
+                                    <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data" >
+                                        @csrf
                                         <div class="form-group">
                                             <label for="">Title</label>
                                             <input type="text" name="title" class="form-control">
@@ -28,7 +29,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="">Category</label>
-                                            <input type="text" name="category" class="form-control">
+                                            <select name="category_id" id="" class="form-control">
+                                                @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Description</label>

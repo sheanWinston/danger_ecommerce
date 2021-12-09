@@ -233,7 +233,7 @@
                      <div class="col-md-12 align-self-center">
                          <div class="ec-main-menu">
                              <ul>
-                                 <li><a href="index.html">Home</a></li>
+                                 <li><a href="{{ route('welcome') }}">Home</a></li>
                                  <li><a href="offer.html">Hot Offers</a></li>
                              </ul>
                          </div>
@@ -251,7 +251,7 @@
              <div class="ec-menu-inner">
                  <div class="ec-menu-content">
                      <ul>
-                         <li><a href="index.html">Home</a></li>
+                         <li><a href="{{ route('welcome') }}">Home</a></li>
                          <li><a href="offer.html">Hot Offers</a></li>
                      </ul>
                  </div>

@@ -29,8 +29,9 @@
                                                         <th scope="col">Image</th>
                                                         <th scope="col">Name</th>
                                                         <th scope="col">Price</th>
-                                                        <th scope="col">Status</th>
-                                                        <th scope="col">Actions</th>
+                                                        <th scope="col">Category</th>
+                                                        <th scope="col">Quantity</th>
+
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -39,9 +40,10 @@
                                                         <th scope="row"><span>{{ $product->id }}</span></th>
                                                         <td><img class="prod-img" src="/products/{{ $product->image }}" alt="product image"></td>
                                                         <td><span>{{ $product->title }}</span></td>
+                                                        <td><span>${{ number_format($product->price) }}</span></td>
                                                         <td><span>{{ $product->category }}</span></td>
                                                         <td><span>{{ $product->quantity }}</span></td>
-                                                        <td><span>${{ $product->price }}</span></td>
+
                                                     </tr>
                                                     @endforeach
 
